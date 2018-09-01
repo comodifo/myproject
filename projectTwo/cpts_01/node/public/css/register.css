@@ -1,0 +1,23 @@
+#constent{
+    margin: 200px auto;
+    padding: 10px;
+    width: 20%;
+    height: 320px;
+    border:2px solid #CED4DA;
+    border-radius: 5px;
+}
+#constent>form>button{
+    margin-top: 3%;
+}
+#constent>form>button:last-child{
+    margin-left: 5%;
+}
+.hidden{
+    visibility: hidden;
+    margin-top: 0.25rem;
+}
+.show{
+    visibility: visible;
+    margin-top: 0.25rem;
+    color: #6c757d !important;
+}

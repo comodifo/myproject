@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/sogin.css"/>
+    <link rel="stylesheet" href="css/head.css"/>
+    <link rel="stylesheet" href="css/foot.css"/>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+   <div id="head"></div>
+   <div id="tbody">
+       <h2>注册</h2>
+      <div class="row">
+           <div class="col-md-2">{{sster[0][0]}}</div>
+           <div class="col-md-6" ><input type="text"/></div>
+           <div class="col-md-4">{{sster[0][1]}}</div>
+       </div>
+       <div class="row">
+           <div class="col-md-2">{{sster[1][0]}}</div>
+           <div class="col-md-6" ><input type="text" v-model="uname"/></div>
+           <div class="col-md-4" :style="Sshow" >{{sster[1][1]}}</div>
+       </div>
+       <div class="row">
+           <div class="col-md-2">{{sster[2][0]}}</div>
+           <div class="col-md-6"><input type="text" v-model="upwd"/></div>
+           <div class="col-md-4" :style="Sshow1">{{sster[2][1]}}</div>
+       </div>
+       <div class="row">
+           <div class="col-md-2">{{sster[3][0]}}</div>
+           <div class="col-md-6"><input type="text" v-model="vefity"/></div>
+           <div class="col-md-2" @click="vef">{{vefi}}</div>
+           <div class="col-md-2" :style="Sshow2">{{sster[3][1]}}</div>
+       </div>
+   </div>
+   <div id="foot"></div>
+   <script>
+       new Vue({
+           el:"#tbody",
+           data:{
+               Sshow:"display:none",
+               Sshow1:"display:none",
+               Sshow2:"display:none",
+               vefi:"点击获取验证码",
+               vefity:"",
+               upwd:"",
+               uname:"",
+               ss:0,
+               sster:[["用户名：","该用户名已存在"],["密码：","请输入6-12位数字或字母"],["确认密码：","两次密码不相同"],["验证码：","验证码错误"]]
+           },
+           methods:{
+               vef(){
+                   this.vefi="";
+                   for(var i=0;i<4;i++){
+                   this.vefi +=Math.floor(Math.random()*10);
+                  }
+                  this.ss++;
+                  if(this.ss>1&&this.vefi!=this.vefity){this.Sshow2="display:block;color:red";} 
+               }
+           },
+           watch:{
+               uname(){
+                   if(this.uname.length<6 || this.uname.length>=16)
+                    this.Sshow="display:block;color:red";
+                    else
+                    this.Sshow="display:none";
+               },
+               upwd(){
+                   if(this.upwd!==this.uname)
+                   this.Sshow1="display:block;color:red";
+                   else
+                   this.Sshow1="display:none";
+               },
+               vefity(){
+                   if(this.vefi=="点击获取验证码" || this.vefi==this.vefity){
+                    this.Sshow2="display:none";
+                   }else {this.Sshow2="display:block;color:red";} 
+               }
+           }
+       })
+   </script>
+</body>
+</html>

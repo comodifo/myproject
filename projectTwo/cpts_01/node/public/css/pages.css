@@ -1,0 +1,73 @@
+#body{
+    width: 85%;
+    margin: 0 auto;
+}
+#body>div#body_one{
+    width: 73%;
+}
+#body>div#body_one>ul>li{
+    margin: 0 10px;
+    display: inline-block;
+    border:1px solid #F0F0F0;
+    margin-bottom:30px ;
+    width: 30%;
+}
+#body>div#body_one>ul>li>div>p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-indent: 15px;
+}
+#body>div#body_one>ul>li>div>a>img{
+    width: 100%;
+}
+#body>div{
+    display: inline-block;
+}
+#body>div#body_two{
+    width: 25%;
+    vertical-align: top;
+}
+#body>div#body_two>ul>li:not(:first-child){
+    margin-top: 50px;
+}
+#body>div#body_two>ul>li>h3{
+    padding: 0 0 20px 25px;
+}
+#body>div#body_two>ul>li>ul{
+    display: inline-block;
+    list-style: none;
+    padding: 0 25px;
+}
+#body>div#body_two>ul>li>ul>li{
+    margin-bottom: 10px;
+}
+#body>div#body_two>ul>li>ul a{
+    text-decoration: none;
+    padding-left: 8px;
+    color:black;
+}
+#body>div#body_two>ul>li:last-child div{
+    margin: 0 0 20px 25px;
+}
+#body>div#body_two>ul>li:last-child a{
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 2px -1px;
+    color: black;
+    background-color:#FFA540;
+}
+#body>div#body_two>ul>li:last-child a:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#body>#body_one>nav{
+    width: 673px;
+    margin:0 auto;
+}
+#body>#body_one>nav>ul>li>a{
+    color: black;
+}
+#body>#body_one>nav>ul>li>a:hover{
+    color: #fff;
+    background-color:#FFA540;
+}

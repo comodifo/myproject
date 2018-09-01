@@ -1,0 +1,26 @@
+#tbody{
+    margin: 0 auto;
+    width: 655px;
+    height: 300px;
+    margin-top: 200px;
+    border:1px solid #FAA645 ;
+    border-radius: 5px;
+}
+#tbody>h2{
+    width: 64px;
+    margin: 5px auto;
+    color:#FAA645 ;
+}
+#tbody>div{
+    margin-left: 5px;
+    margin-top:20px;
+}
+#tbody>div:first-child{
+    margin-top: 55px;
+}
+#tbody>div input{
+    width: 100%;
+}
+#tbody>div:last-child>div:nth-child(3){
+    background-color: #FAA645;
+}

@@ -1,0 +1,47 @@
+#foot{
+    width: 100%;
+    display: block;
+}
+#foot>div:first-child{
+    height:300px;
+    background:#434955;
+}
+#foot>div:last-child{
+    height: 100px;
+    background:#353B47;
+}
+#foot .col-md-3 p{
+    font-size: 20px;
+    color: #ffffff;
+}
+#foot .col-md-3 li{
+    padding: 5px 0;
+}
+#foot .col-md-3 li div{
+    display: inline-block;
+    vertical-align: top;
+}
+#foot a{
+    color:#87928D;
+}
+#foot .row{
+    font-size: 13px;
+    color: #87928D;
+}
+#foot input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px 0 0 5px ;
+    background-color:#353B47 ;
+    border:0;
+}
+#foot button{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    background-color:#FFA540;
+    border:0;
+}
+#foot button img{
+    line-height: 30px;
+}

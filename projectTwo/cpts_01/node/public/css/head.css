@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#head{
+    width:100%;
+    height:140px;
+    background: url("../images/banner_bg.jpg") no-repeat center fixed;
+    background-size: cover;
+    position:relative ;
+    top:0px;
+    z-index: 100;
+}
+#head>#one{
+    width: 80%;
+    margin-left:10%;
+    position:absolute;
+}
+#head>#one>ul{
+    position: absolute;
+    top:10px;
+    right:0px;
+    z-index: 999;
+}
+#head>#one>ul>li>a:hover{
+    color: #FAA645;
+}
+#head>#one>ul>li{
+    float:left;
+    height:95px;
+    line-height: 80px;
+}
+#bot>li:hover{
+    height: 95px;
+    border-bottom:
+    9px solid #FAA645;
+}
+#head>#one>ul>li>a{
+    display: inline-block;
+    padding:0 15px;
+    font-size:20px;
+}
+#head #one ul li>a{
+    display: block;
+    width: 100%;
+    height:100%;
+    color: #fff;
+}
+#head hr{
+    width: 100%;
+    background-color:#6579A2;
+    position: absolute;
+    top: 69px;
+}
+.ss{
+    position: absolute;
+    top: 95px;
+    width: 13rem;
+    background-color: rgba(73, 93, 137, 0.56);
+}
+.drop {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border-top: 1px solid #464D64;
+    display: none;
+}
+#bot>li:hover .drop{
+    display:block;
+}
+.drop:hover{
+    background-color:#FAA645;
+}
+a{
+    text-decoration: none !important;
+}
+a:hover{
+    text-decoration: none !important;
+}
+#zhuxiao,#denglu{
+    width: 130px;
+    height: 20px;
+    position: relative;
+    top:63px;
+    left: 90%;
+    display: inline-block;
+}
+#zhuxiao,#denglu>span{
+    color:#FAA645 !important;
+}
+#denglu>a{
+    color:#FAA645 !important;
+}
+#zhuxiao>a{
+    color:#FAA645 !important;
+}
+#zhuxiao,#denglu>a:hover{
+    color:#FAA645 !important;
+}
