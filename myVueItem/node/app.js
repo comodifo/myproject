@@ -3,6 +3,8 @@ const bodyParser = require ('body-parser');
 const cors = require('cors');
 var message = require('./routes/message');
 var forum = require('./routes/forum');
+var video = require('./routes/video');
+var shopping = require('./routes/shopping')
 var app = express();
 app.listen(4000);
 
@@ -16,3 +18,5 @@ app.use(cors({
 
 app.use('/message',message);
 app.use('/forum',forum);
+app.use('/video',video);
+app.use('/shopping',shopping);

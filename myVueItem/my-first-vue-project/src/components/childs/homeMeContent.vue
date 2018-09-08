@@ -1,6 +1,7 @@
 /*新闻资讯页面*/
 <template>
     <div id="MeContent">
+            <returnss></returnss> 
             <!--页眉，放置标题-->
             <div class="mui-card-header mui-card-media">
                 <img src="../../img/heardsm.png"/>
@@ -12,10 +13,10 @@
             <!--内容区-->
             <div class="mui-card-content" max-size>　　{{list.content}}</div>
             <!--页脚，放置补充信息或支持的操作-->
-            <div class="mui-card-footer" @click="go">&lt;&lt;返回</div> 
     </div>
 </template>
 <script>
+import returnss from '../reusing/returnss.vue'
 import Toast from 'mint-ui'
     export default{
         data(){
@@ -36,12 +37,20 @@ import Toast from 'mint-ui'
                     Toast("数据错误");
                 }
               })
-            },
-            go(){
-                history.go(-1);
             }
+        },
+        components:{
+            returnss
         }
     }
 </script>
 <style>
+  .returnss{
+      width:80px;
+      position:relative;
+      top:-30px;
+      left:10px;
+      color:#fff;
+      z-index:999;
+  }
 </style>

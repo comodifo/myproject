@@ -9,6 +9,12 @@ import Message from './components/childs/homeMessage.vue'
 import MeContent from './components/childs/homeMeContent.vue'
 import Forum from './components/childs/homeForum.vue'
 import FoText from './components/childs/homeFoText.vue'
+import FoTXT from './components/childs/homeFoTXT.vue'
+import Video from './components/childs/homeVideo.vue'
+import Ranking from './components/childs/homeRanking.vue'
+import Shopping from './components/childs/homeShopping.vue'
+import ShChild from './components/childs/homeShChild.vue'
+
 
 Vue.use(Router)
 
@@ -25,5 +31,10 @@ export default new Router({
     {path:'/home/Message/MeContent/:id',component:MeContent,name:"MeContent"},
     {path:'/home/Forum',component:Forum},
     {path:'/home/FoText/:id',component:FoText,name:"FoText"},
+    {path:'/home/FoTXT/:id',component:FoTXT,name:"FoTXT"},
+    {path:'/home/Video',component:Video},
+    {path:'/home/Ranking',component:Ranking},
+    {path:'/home/Shopping',component:Shopping},
+    {path:'/home/Shopping/ShChild/:id',component:ShChild,name:"ShChild"}
   ]
 })

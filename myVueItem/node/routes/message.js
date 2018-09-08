@@ -10,7 +10,6 @@ router.get('/list',(req,res)=>{
 });
 router.get('/listContent',(req,res)=>{
     var $id = req.query.id;
-    if($id) res.send({code:-1});
     var sql="SELECT id,title,content,mdate,img_url FROM message WHERE id=?";
     pool.query(sql,[$id],(err,result)=>{
         if(err) throw err;

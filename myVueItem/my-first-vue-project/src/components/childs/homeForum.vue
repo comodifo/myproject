@@ -13,6 +13,8 @@
                 </a>
             </li>
         </ul>
+        <mt-button type="danger" size="large" @click="setTid(1)">发帖</mt-button>
+        </mt-popup>
     </div>
 </template>
 <script>
@@ -21,7 +23,8 @@
         data(){
             return {
                 list:[],
-                pno:1
+                pno:1,
+                popupVisible:[]
             }
         },
         created() {
@@ -38,6 +41,9 @@
             },
         setfid(id){
             this.$router.push({name:"FoText",params:{id}})
+        },
+        setTid(id){
+            this.$router.push({name:"FoTXT",params:{id}})
         }
         }
     }

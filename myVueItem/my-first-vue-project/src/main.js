@@ -73,5 +73,5 @@ Vue.config.productionTip = false
 //3：创建vue实现对象挂载  public/index.html#app
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),store
 }).$mount('#app')

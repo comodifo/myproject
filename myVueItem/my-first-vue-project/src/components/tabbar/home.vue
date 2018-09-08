@@ -10,21 +10,21 @@
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-university"></span>
                         <div class="mui-media-body">大师讲堂</div></a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/Shopping">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-class"></span>
-                        <div class="mui-media-body">图书分类</div></a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <div class="mui-media-body">图书分类</div></router-link></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/Video">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-computer"></span>
-                        <div class="mui-media-body">数字产品</div></a></li>
+                        <div class="mui-media-body">数字产品</div></router-link></li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-xiaoshuo"></span>
                         <div class="mui-media-body">免费</div></a></li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-prech"></span>
                         <div class="mui-media-body">充值</div></a></li>
-                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/Ranking">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-trend"></span>
-                        <div class="mui-media-body">热门排行</div></a></li>
+                        <div class="mui-media-body">热门排行</div></router-link></li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                         <span class="mui-icon mui-icon-extra mui-icon-extra-gift"></span>
                         <div class="mui-media-body">活动</div></a></li>

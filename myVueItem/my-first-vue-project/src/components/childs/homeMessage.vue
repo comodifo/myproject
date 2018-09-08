@@ -7,7 +7,7 @@
                 <img src="../../img/heardsm.png"/>
                 <div class="mui-media-body">
                     {{item.title}}
-                    <p>发表于 {{item.mdate}}</p>
+                    <p>发表于 {{parseInt(item.mdate) | datetimeFilter}}</p>
                 </div>
             </div>
             <!--内容区-->
