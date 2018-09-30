@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>请求xml数据</title>
+    <meta charset="utf-8">
+    <style></style>
+  </head>
+  <body>
+     <input type="button" value="获取xml数据" onclick="getXml()">
+     <script src="common.js"></script>
+     <script>
+        function getXml(){
+          //1.创建Xhr
+          var xhr=createXhr();
+          console.log(xhr);
+          //2.监听事件
+          xhr.onreadystatechange=function(){
+           if(xhr.readyState==4&&xhr.status==200){
+             //接收返回的xml数据
+             var res=xhr.responseXML;
+             console.log(res);
+             //获取xml里的student标签
+				var students=res.getElementsByTagName("student");
+				console.log(students);
+				//获取类数组中第一个学生
+				var stu=students[0];
+				console.log(stu);
+				//获取第一个学生的姓名
+				var uname=stu.getElementsByTagName("name");
+				console.log(uname[0]);
+				//取出name标签中的文本
+				console.log(uname[0].innerHTML);
+           }
+          }
+          //3.打开连接
+          xhr.open("get","url",true);
+          //4.发送请求
+          xhr.send(null);
+        }
+     </script>
+  </body>
+</html>

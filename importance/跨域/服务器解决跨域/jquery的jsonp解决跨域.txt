@@ -1,0 +1,24 @@
+JSONP: json with padding 填充式json
+   需要客户端和服务端配合！
+   
+基本原理: 虽然xhr不允许跨域，但是<script src="">可以
+
+方案1:
+  服务器端:  res.end("js语句 中 填充上 数据")
+   客户端: 一定不能用ajax       只能用script src="原服务端地址"
+  问题: 操作是写死的！
+方案2:
+  服务端: 返回一条函数调用语句，其中，数据作为参数！
+  客户端: 在script请求远程之前 提前定义一个与服务端 要求同名的函数，接收一个数据参数，并定义处理过程.
+  问题: 函数名是写死的！
+方案3:
+  服务端: 要求客户端传入一个函数名参数 并将函数名参数动态拼接到返回的函数调用语句前
+  客户端:        提前定义一个函数       script src="服务端地址?变量=函数名"
+  问题: 只能在页面加载时请求一次
+方案4:
+  客户端: 不提前写死script请求 在事件处理函数中，动态创建script请求，并加入body结尾
+  问题: 堆积了大量无用的script
+  解决: 在处理函数的结尾，动态删除最后一个script
+jQuery实现跨域:
+  客户端:     $.ajax({  …  dataType:"jsonp", success:function(res){ … } })
+  服务端:  router.get("/",(req,res)=>{   var fun=req.query.callback;   var data="数据";   …   res.end(`${fun}('${data}')`) })

@@ -1,0 +1,19 @@
+$.ajax({
+ 
+url:"请求地址",
+    
+type:"get/post",
+    
+data:{ 参数 },
+    
+dataType: "json"  //仅json需要, 可自动将json转为对象
+   
+success:function(res){ //请求完成，且成功后触发
+     
+                      //res: 服务器端返回的数据
+  
+error:function(){ … } //请求完成，但出错
+    
+complete:function(){ … } //只要请求完成，就触发
+}
+}).then(res=>{ … })

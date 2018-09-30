@@ -1,0 +1,7 @@
+//加载模块 VueResource(发送ajax请求)
+import VueResource from 'vue-resource'
+
+//设置请求的根路径
+Vue.http.options.root="http://cdsd.applinzi.com/";
+
+this.$http.get("forum/listsingle?id="+this.id).then(result=>{ })

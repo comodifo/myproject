@@ -1,0 +1,8 @@
+router.get("/2",(req,res)=>{
+  var weather="北京 晴 26~32";
+  res.writeHeader(200,{
+    "Content-Type":"text/plain;charset=utf-8",
+    "Access-Control-Allow-Origin":"*"//需要解决跨域的IP地址，*代表允许所有
+  });
+  res.end(weather);
+})

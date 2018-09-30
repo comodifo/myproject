@@ -1,0 +1,19 @@
+1. 引入: <script src="js/axios.min.js">     
+在全局创建了一个axios对象: .get()  .post()
+
+2.发送
+
+get请求:       
+axios.get("url",{        
+        params:{  参数列表 } 
+}).then(res=>{    var data=res.data;    
+              //data才是服务端返回的数据/对象 })
+
+
+post请求:       
+     axios.post("url", "变量=值&变量=值&…").then(…)
+  强调: 如果支持服务端跨域, 参数必须以查询字符串方式定义
+  解决: Qs.stringify
+  如何: 2步:         
+   1. 引入: qs.min.js        
+   2. axios.post("url",Qs.stringify({ 参数:值, 参数:值, … }))

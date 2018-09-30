@@ -1,0 +1,7 @@
+//加载跨域模块 const cors = require('cors');
+//配置跨域模块;允许哪个地址跨域访问
+ app.use(cors(  
+{   origin: ['http://127.0.0.1:8080',    
+     'http://localhost:8080'],    
+     credentials:true 
+}));

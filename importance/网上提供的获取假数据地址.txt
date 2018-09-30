@@ -1,0 +1,2 @@
+提供模仿服务器端传输的数据   各种请求都有
+http://jsonplaceholder.typicode.com
