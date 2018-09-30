@@ -1,0 +1,94 @@
+//第一次用时全局
+git config --global user.name '邮箱'
+//在要上传的文件中打开命令
+git clone
+//进入有git的同级目录中
+//检测是否有更改
+git status
+//跟踪未提交文件
+git add 文件名
+//跟踪所有未提交文件
+git add -A
+//检测是否已跟踪
+git status
+//加入本地缓存
+git commit -m '备注内容'
+//所有文件加入本地缓存
+git commit -a -m"first commit"
+//推送
+git push -u origin master
+//在其他地方更改先
+git clone 地址
+//下载下来
+//修改完成
+//检测是否有更改
+git status
+//更跟
+git add 文件名
+//检测是否已跟踪
+git status
+//加入本地缓存
+git commit -m '备注内容'
+//推送
+git push -u origin master
+//在其他地方更改先
+
+
+# 从公司git库中获取项目到本地以及切换到开发分支的步骤 start #
+//克隆项目到本地
+git clone git@192.168.1.110:Admin/projectname.git
+//然后就是将本地分支关联上远程分支的步骤先创建本地分支，
+git checkout -b dragon? 此时当前分支就是dragon
+git checkout master?
+git pull origin master
+git checkout dragon
+git pull origin develop
+git push origin dragon:develop
+git branch --set-upstream-to origin/develop
+# end #
+
+如果本地连过其他的git地址，需要将远程仓库地址改为公司的gitlab地址 git 命令如下：
+git remote rm origin
+git remote add origin git@192.168.1.110:Admin/projectname.git?
+
+
+//删除远程分支命令
+git push origin --delete <branchName>
+
+//查看状态
+git status
+//查看远程库信息
+git remote -v
+//查看本地和远程分支
+git branch -a
+//查看本地和远程的关联
+git branch -vv
+
+提交所有代码：git add . 和 git commit -m ""， 或者 git commit -am ""		
+//比较本地与远程分支的差异
+git log local_branch origin/remote_branch
+git diff --stat local_branch origin/remote_branch//
+
+放弃本地修改 强制更新
+git fetch --all
+git reset --hard origin/develop
+
+//回退上一版本
+git reset --hard HEAD~1
+
+别名设置：
+core.autocrlf=true
+pull.rebase=true
+alias.lg=log --oneline --decorate --all -graph
+alias.co=checkout
+alias.st=status
+alias.ci=commit
+alias.br=branch
+alias.last=log -1 HEAD
+alias.unstage='reset HEAD'
+push.default=simple
+以上git全局参数，请大家保存，方便快捷
+
+当手头工作没有完成时，先把工作现场git stash一下，然后去
+修复另一个bug，修复后，再git stash pop，回到工作现场。
+
